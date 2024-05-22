@@ -4,6 +4,8 @@ import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
 import java.time.LocalTime;
+import java.util.Arrays;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -55,4 +57,19 @@ class RestaurantTest {
                 ()->restaurant.removeFromMenu("French fries"));
     }
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+    //<<<<<<<<<<<<<<<<<<<<<<<Get Order Value>>>>>>>>>>>>>>>>>>>>>>>>>>>>> ///test case for ordered value.
+    @Test
+    public void order_value_should_be_388_when_SweetCornSoup_and_Vegetable_Lasagne_are_ordered() throws restaurantNotFoundException{
+        //Arrange
+        List<String> orderedItems= Arrays.asList("Sweet corn soup", "Vegetable lasagne");
+
+        //act
+        int totalOrderValue=restaurant.getOrderValue(orderedItems);
+
+        //assert
+        assertEquals(totalOrderValue,388);
+    }
+
+    //<<<<<<<<<<<<<<<<<<<<<<<Get Order Value>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 }
