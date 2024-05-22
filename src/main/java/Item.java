@@ -1,5 +1,8 @@
 public class Item {
     private String name;
+
+
+
     private int price;
 
     public Item(String name, int price) {
@@ -9,6 +12,11 @@ public class Item {
 
     public String getName() {
         return name;
+    }
+
+    //added for the orderValue Method in order to get the price
+    public int getPrice() {
+        return price;
     }
     @Override
     public String toString(){

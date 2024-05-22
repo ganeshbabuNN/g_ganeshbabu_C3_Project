@@ -35,3 +35,6 @@ The features to be developed in TDD way.
 * *Write failing test cases for the feature to be developed*
 * *Develop the feature as required to make the test case pass*
 * *Running the test case should now lead to a pass case scenario and line coverage should be 98% or more. (You can ignore the methods written for output formatting)*
+
+*Test Coverage:*
+![Test Coverage!](/image.png)
